@@ -19,14 +19,18 @@ npm run serve
 ```
 3.登录
 
-数据库现存常用的账号<br>
-（1）普通用户<br>
+数据库现存常用的账号
+
+（1）普通用户
+
 用户名：张楚岚<br>
 密码：123<br>
 
 用户名：川轻化<br>
 密码：123<br>
+
 （2）管理员
+
 用户名：adminUser<br>
 密码：123456<br>
 
@@ -37,6 +41,7 @@ npm run serve
 
 ## 后端
 1.运行
+
 在service.go文件下执行
 ```
 go run service.go
