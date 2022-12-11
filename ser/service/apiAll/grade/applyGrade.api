@@ -1,0 +1,14 @@
+type (
+	// 编辑用户信息
+	ApplyGradeReq {
+		UserId     int64  `json:"userId"`
+		ApplyIntro string `json:"applyIntro"`
+		StartTime  string `json:"startTime"`
+		
+	}
+	ApplyGradeResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+        
+	}
+)

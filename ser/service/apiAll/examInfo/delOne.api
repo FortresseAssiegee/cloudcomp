@@ -1,0 +1,12 @@
+type (
+	examInfoDelOneReq {
+		ActvId int64 `json:"actvId"`
+		UnitId int64 `json:"unitId"`
+		UserId int64 `json:"userId"`
+		ExamId int64 `json:"examId"`
+	}
+	examInfoDelOneResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

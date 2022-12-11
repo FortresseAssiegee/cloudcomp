@@ -1,0 +1,29 @@
+type (
+	// 获取活动信息
+	getAllNoUserReq {
+	}
+	getAllNoUserResp {
+		State    string         `json:"state"`
+		Commont  string         `json:"commont"`
+		BaseInfo []GradeBaseAll `json:"baseInfo"`
+	}
+
+	GradeBaseAll {
+		ActvId         int64  `json:"actvId"`
+		
+		Grade          int64  `json:"grade"`
+		UserId         int64  `json:"userId"`
+		CreateUserName string `json:"createUserName"`
+
+		TagCode        int64  `json:"tagCode"`
+		ExamCode       int64  `json:"examCode"`
+		PeriodCode     int64  `json:"periodCode"`
+		AwardCode      int64  `json:"awardCode"`
+		ActvName       string `json:"actvName"`
+		Intro          string `json:"intro,optional"`
+		Pstr           string `json:"pstr,optional"`
+
+		ApplyStartTime string `json:"applyStartTime"`
+		ApplyEndTime   string `json:"applyEndTime"`
+	}
+)

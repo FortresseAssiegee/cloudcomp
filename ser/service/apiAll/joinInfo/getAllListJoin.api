@@ -1,0 +1,53 @@
+type (
+	// 获取创建者所有加入的活动
+	getAllListJoinReq {
+		UserId int64 `json:"userId"`
+		// JoinId       int64 `josn:"joinId"`
+		// UserCreateId int64 `json:"userCreateId"`
+		// UserJoinId   int64 `json:"userJoinId"`
+		NowPage int64 `json:"nowPage"`
+		Count   int64 `json:"count"`
+	}
+	getAllListJoinResp {
+		State    string      `json:"state"`
+		Commont  string      `json:"commont"`
+		JoinList []JoinTable `json:"joinList"`
+		PageObj  Page        `json:"pageObj"`
+	}
+
+	JoinAll {
+		ActvId         int64  `json:"actvId"`
+		StateCode      int64  `json:"stateCode"`
+		TagCode        int64  `json:"tagCode"`
+		ExamCode       int64  `json:"examCode"`
+		PeriodCode     int64  `json:"periodCode"`
+		AwardCode      int64  `json:"awardCode"`
+		ActvName       string `json:"actvName"`
+		Intro          string `json:"intro,optional"`
+		Pstr           string `json:"pstr,optional"`
+		ActvPics       string `json:"actvPics,optional"`
+		StartTime      string `json:"startTime"`
+		EndTime        string `json:"endTime"`
+		ApplyStartTime string `json:"applyStartTime"`
+		ApplyEndTime   string `json:"applyEndTime"`
+		ExamStartTime  string `json:"examStartTime"`
+		ExamEndTime    string `json:"examEndTime"`
+	}
+
+	JoinTable {
+		ActvId         int64  `json:"actvId"`
+		StateCode      int64  `json:"stateCode"`
+		ActvName       string `json:"actvName"`
+		ExamStartTime  string `json:"examStartTime"`
+		ExamEndTime    string `json:"examEndTime"`
+		UserCreateId   int64  `json:"userCreateId"`
+		UserCreateName string `json:"userCreateName"`
+		Rank           int64  `json:"rank"`
+	}
+
+	// Page {
+	// 	LenPage int64 `json:"lenPage"`
+	// 	Count   int64 `json:"count"`
+	// 	NowPage int64 `json:"nowPage"`
+	// }
+)

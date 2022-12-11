@@ -1,0 +1,11 @@
+// 下架活动
+type (
+	downReq {
+		ActvId  int64  `json:"actvId"`
+		UserId  int64  `json:"userId"`
+	}
+	downResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

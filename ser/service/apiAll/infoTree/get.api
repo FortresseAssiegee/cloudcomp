@@ -1,0 +1,12 @@
+type (
+
+	// 添加活动tree信息
+	infoTreeGetReq {
+		ActvId int64 `json:"actvId"`
+	}
+	infoTreeGetResp {
+		State    string `json:"state"`
+		Commont  string `json:"commont"`
+		InfoTree []Leaf `json:"infoTree"`
+	}
+)

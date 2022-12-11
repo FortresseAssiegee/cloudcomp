@@ -1,0 +1,15 @@
+type (
+	// 编辑用户信息
+	ReplyGradeReq {
+		// UserId     int64  `json:"userId"`
+		ReplyIntro string `json:"replyIntro"`
+		EndTime    string `json:"endTime"`
+		GradeId    int64  `json:"gradeId"`
+		GradeCode  int64  `json:"gradeCode"`
+		Garde      int64  `json:"garde"`
+	}
+	ReplyGradeResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

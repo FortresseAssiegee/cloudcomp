@@ -1,0 +1,31 @@
+type (
+	// 获取加入了这个活动的成员
+	endExamReq {
+		ExamId       int64 `json:"examId"`
+		ActvId       int64 `json:"actvId"`
+		UnitId       int64 `json:"unitId"`
+		UserCreateId int64 `json:"userCreateId"`
+		UserJoinId   int64 `json:"userJoinId"`
+
+		AnswerList []AnswerExam `json:"answerList"`
+		RecordInfo ExamRecord   `json:"recordInfo"`
+
+		StartTime string `json:"startTime"`
+		EndTime   string `json:"endTime"`
+	}
+	endExamResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+
+	AnswerExam {
+		ExamId int64  `json:"examId"`
+		Answer string `json:"answer"`
+		During int64  `json:"during,optional"` //做这个题花了多少时间
+	}
+	ExamRecord {
+		Intro        string `json:"intro"`
+		Illegal      string `json:"illegal"`
+		IllegalIntro string `json:"illegalIntro"`
+	}
+)

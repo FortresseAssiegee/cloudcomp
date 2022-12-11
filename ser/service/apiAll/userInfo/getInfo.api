@@ -1,0 +1,25 @@
+type (
+	// 获取用户信息
+	GetInfoReq {
+		UserId int64 `json:"userId"`
+	}
+	GetInfoResp {
+		State    string `json:"state"`
+		Commont  string `json:"commont"`
+		UserInfo Info   `json:"userInfo"`
+	}
+
+	// 用户信息
+	Info {
+		UserName   string `json:"userName"`
+		Avt        string `json:"avt"`
+		Tel        string `json:"tel"`
+		CreateTime string `json:"createTime"`
+		UserId     int64  `json:"userId"`
+		Grade      int64  `json:"grade"`
+		JoinNum    int64  `json:"joinNum"`
+		CreateNum  int64  `json:"createNum"`
+		Intro      string `json:"intro"`
+		Email      string `json:"email"`
+	}
+)

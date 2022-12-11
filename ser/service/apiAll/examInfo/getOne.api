@@ -1,0 +1,14 @@
+type (
+	examInfoGetOneReq {
+		ActvId int64 `json:"actvId"`
+		UnitId int64 `json:"unitId"`
+		UserId int64 `json:"userId"`
+		ExamId int64 `json:"examId"`
+	}
+	examInfoGetOneResp {
+		State        string   `json:"state"`
+		Commont      string   `json:"commont"`
+		QuestOneList QuestOne `json:"questOneList"`
+	}
+
+)

@@ -1,0 +1,39 @@
+type (
+	// 添加活动
+	baseInfoEditReq {
+		UserId   int64   `json:"userId"`
+		BaseInfo BaseAll `json:"baseInfo"`
+	}
+	baseInfoEditResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+	BaseAll {
+		ActvId int64 `json:"actvId"`
+
+		StateCode  int64  `json:"stateCode"`
+		TagCode    int64  `json:"tagCode"`
+		ExamCode   int64  `json:"examCode"`
+		PeriodCode int64  `json:"periodCode"`
+		AwardCode  int64  `json:"awardCode"`
+		ActvName   string `json:"actvName"`
+		Intro      string `json:"intro"`
+		Pstr       string `json:"pstr"`
+		InFoDegree int64  `json:"inFoDegree"`
+
+		StartTime      string `json:"startTime"`
+		EndTime        string `json:"endTime"`
+		ApplyStartTime string `json:"applyStartTime"`
+		ApplyEndTime   string `json:"applyEndTime"`
+		ExamStartTime  string `json:"examStartTime"`
+		ExamEndTime    string `json:"examEndTime"`
+
+		UserId          int64  `json:"userId"`
+		CreateUserName  string `json:"createUserName"`
+		CreateUserTel   string `json:"createUserTel"`
+		CreateUserEmail string `json:"createUserEmail"`
+		CreateUserAvt   string `json:"createUserAvt"`
+
+		CreateUserGrade int64 `json:"createUserGrade"`
+	}
+)

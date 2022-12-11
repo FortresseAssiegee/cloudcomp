@@ -1,0 +1,398 @@
+// compe_info
+import (
+	"./apiAll/baseInfo/add.api"
+	"./apiAll/baseInfo/getOne.api"
+	"./apiAll/baseInfo/getAll.api"
+	
+	"./apiAll/baseInfo/del.api"
+	"./apiAll/baseInfo/edit.api"
+	
+	"./apiAll/baseInfo/pubulish.api"
+	"./apiAll/baseInfo/out.api"
+	"./apiAll/baseInfo/down.api"
+	
+	"./apiAll/baseInfo/getHotTagShowList.api"
+	"./apiAll/baseInfo/getTagShowList.api"
+	"./apiAll/baseInfo/getAllNoUser.api"
+	
+	// 排行榜
+	"./apiAll/baseInfo/getRankAll.api"
+	"./apiAll/baseInfo/getRankHome.api"
+)
+
+@server(
+	group:baseInfo
+	jwt: Auth
+)
+
+service service-api {
+	@handler Add
+	post /baseInfo/add(baseInfoAddReq) returns (baseInfoAddResp)
+	
+	@handler GetOne
+	post /baseInfo/getOne(baseInfoGetOneReq) returns (baseInfoGetOneResp)
+	@handler GetAll
+	post /baseInfo/getAll(baseInfoGetAllReq) returns (baseInfoGetAllResp)
+	@handler Edit
+	post /baseInfo/edit(baseInfoEditReq) returns (baseInfoEditResp)
+	@handler Del
+	post /baseInfo/del(baseInfoDelReq) returns (baseInfoDelResp)
+	
+	// 发布和下架
+	@handler Out
+	post /baseInfo/out(outReq) returns (outResp)
+	@handler Pubulish
+	post /baseInfo/pubulish(publishReq) returns (pubulishResp)
+	@handler Down
+	post /baseInfo/down(downReq) returns (downResp)
+	
+	// 首页获取的列表
+	@handler GetHotTagShowList
+	post /baseInfo/getHotTagShowList(hotTagListReq) returns (hotTagListResp)
+	@handler GetTagShowList
+	post /baseInfo/getTagShowList(getTagShowListReq) returns (getTagShowListResp)
+	@handler GetAllNoUser
+	post /baseInfo/getAllNoUser(getAllNoUserReq) returns (getAllNoUserResp)
+	
+	@handler GetRankAll
+	post /baseInfo/getRankAll(getRankAllReq) returns (getRankAllResp)
+	@handler GetRankHome
+	post /baseInfo/getRankHome(getRankHomeReq) returns (getRankHomeResp)
+	
+}
+
+// info_tree
+import (
+	"./apiAll/infoTree/add.api"
+	"./apiAll/infoTree/del.api"
+	"./apiAll/infoTree/edit.api"
+	"./apiAll/infoTree/get.api"
+	"./apiAll/infoTree/addOne.api"
+	"./apiAll/infoTree/delOne.api"
+	"./apiAll/infoTree/editOne.api"
+	"./apiAll/infoTree/getOne.api"
+)
+
+@server(
+	group:infoTree
+	jwt: Auth
+)
+
+service service-api {
+	@handler Add
+	post /infoTree/add(infoTreeAddReq) returns (infoTreeAddResp)
+	@handler Get
+	post /infoTree/get(infoTreeGetReq) returns (infoTreeGetResp)
+	@handler Edit
+	post /infoTree/edit(infoTreeEditReq) returns (infoTreeEditResp)
+	@handler Del
+	post /infoTree/del(infoTreeDelReq) returns (infoTreeDelResp)
+	@handler AddOne
+	post /infoTree/addOne(infoTreeAddOneReq) returns (infoTreeAddOneResp)
+	@handler GetOne
+	post /infoTree/getOne(infoTreeGetOneReq) returns (infoTreeGetOneResp)
+	@handler EditOne
+	post /infoTree/editOne(infoTreeEditOneReq) returns (infoTreeEditOneResp)
+	@handler DelOne
+	post /infoTree/delOne(infoTreeDelOneReq) returns (infoTreeDelOneResp)
+	
+}
+
+// unitTree
+import (
+	
+	"./apiAll/unitTree/get.api"
+	"./apiAll/unitTree/addOne.api"
+	"./apiAll/unitTree/delOne.api"
+	"./apiAll/unitTree/editOne.api"
+	"./apiAll/unitTree/getOne.api"
+	
+)
+
+@server(
+	group:unitTree
+	jwt: Auth
+)
+
+service service-api {
+	
+	@handler Get
+	post /unitTree/get(unitTreeGetReq) returns (unitTreeGetResp)
+	@handler AddOne
+	post /unitTree/addOne(unitTreeAddOneReq) returns (unitTreeAddOneResp)
+	@handler GetOne
+	post /unitTree/getOne(unitTreeGetOneReq) returns (unitTreeGetOneResp)
+	@handler EditOne
+	post /unitTree/editOne(unitTreeEditOneReq) returns (unitTreeEditOneResp)
+	@handler DelOne
+	post /unitTree/delOne(unitTreeDelOneReq) returns (unitTreeDelOneResp)
+	
+}
+
+// exam_info
+import (
+	"./apiAll/examInfo/get.api"
+	"./apiAll/examInfo/addOne.api"
+	"./apiAll/examInfo/delOne.api"
+	"./apiAll/examInfo/editOne.api"
+	"./apiAll/examInfo/getOne.api"
+	
+)
+
+@server(
+	group:examInfo
+	jwt: Auth
+)
+
+service service-api {
+	@handler Get
+	post /examInfo/get(examInfoGetReq) returns (examInfoGetResp)
+	@handler AddOne
+	post /examInfo/addOne(examInfoAddOneReq) returns (examInfoAddOneResp)
+	@handler GetOne
+	post /examInfo/getOne(examInfoGetOneReq) returns (examInfoGetOneResp)
+	@handler EditOne
+	post /examInfo/editOne(examInfoEditOneReq) returns (examInfoEditOneResp)
+	@handler DelOne
+	post /examInfo/delOne(examInfoDelOneReq) returns (examInfoDelOneResp)
+	
+}
+
+// day_actv_info
+import (
+	"./apiAll/dayActv/addHot.api"
+	"./apiAll/dayActv/addJoin.api"
+	"./apiAll/dayActv/addLookupActv.api"
+	
+)
+
+@server(
+	group:dayActv
+	jwt: Auth
+)
+
+service service-api {
+	@handler AddHot
+	post /dayActv/addHot(addHotReq) returns (addHotResp)
+	@handler AddJoin
+	post /dayActv/addJoin(addJoinReq) returns (addJoinResp)
+	@handler AddLookupActv
+	post /dayActv/AddLookup(addLookupActvReq) returns (addLookupActvResp)
+	
+}
+
+// join_info
+import (
+	"./apiAll/joinInfo/join.api"
+	"./apiAll/joinInfo/out.api"
+	"./apiAll/joinInfo/checkJoin.api"
+	"./apiAll/joinInfo/getAllListActv.api"
+	"./apiAll/joinInfo/getAllListJoin.api"
+	
+)
+
+@server(
+	group:joinInfo
+	jwt: Auth
+)
+
+service service-api {
+	@handler Join
+	post /joinInfo/join(joinReq) returns (joinResp)
+	@handler Out
+	post /joinInfo/out(outJoinReq) returns (outJoinResp)
+	@handler CheckJoin
+	post /joinInfo/checkJoin(checkJoinReq) returns (checkJoinResp)
+	@handler GetAllListActv
+	post /joinInfo/getAllListActv(getAllListActvReq) returns (getAllListActvResp)
+	@handler GetAllListJoin
+	post /joinInfo/getAllListJoin(getAllListJoinReq) returns (getAllListJoinResp)
+	
+}
+
+// join_unit_info
+import (
+	"./apiAll/joinUnitInfo/startExam.api"
+	"./apiAll/joinUnitInfo/endExam.api"
+	"./apiAll/joinUnitInfo/startExam52.api"
+	"./apiAll/joinUnitInfo/endExam52.api"
+	"./apiAll/joinUnitInfo/startExam53.api"
+	"./apiAll/joinUnitInfo/endExam53.api"
+	
+	"./apiAll/joinUnitInfo/getRankList.api"
+	"./apiAll/joinUnitInfo/getList.api"
+	"./apiAll/joinUnitInfo/simOss.api"
+	
+	"./apiAll/joinUnitInfo/checkExam.api"
+	"./apiAll/joinUnitInfo/delExam.api"
+)
+
+@server(
+	group:joinUnitInfo
+	jwt: Auth
+)
+
+service service-api {
+	@handler StartExam
+	post /joinUnitInfo/startExam(startExamReq) returns (startExamResp)
+	@handler EndExam
+	post /joinUnitInfo/endExam(endExamReq) returns (endExamResp)
+	@handler StartExam52
+	post /joinUnitInfo/startExam52(startExam52Req) returns (startExam52Resp)
+	@handler EndExam52
+	post /joinUnitInfo/endExam52(endExam52Req) returns (endExam52Resp)
+	@handler StartExam53
+	post /joinUnitInfo/startExam53(startExam53Req) returns (startExam53Resp)
+	@handler EndExam53
+	post /joinUnitInfo/endExam53(endExam53Req) returns (endExam53Resp)
+	
+	@handler GetRankList
+	post /joinUnitInfo/getRankList(getRankListReq) returns (getRankListResp)
+	@handler GetList
+	post /joinUnitInfo/getList(getListReq) returns (getListResp)
+	@handler SimOss
+	post /joinUnitInfo/simOss(simOssReq) returns (simOssResp)
+	
+	@handler CheckExam
+	post /joinUnitInfo/checkExam(checkExamReq) returns (checkExamResp)
+	@handler DelExam
+	post /joinUnitInfo/delExam(delExamReq) returns (delExamResp)
+}
+
+// 登录、注册 user_info
+import "./apiAll/login/login.api"
+import "./apiAll/login/sign.api"
+import "./apiAll/login/forgetPwd.api"
+
+@server(
+	group:login
+)
+
+service service-api {
+	@handler Login
+	post /login(UserLoginReq) returns (UserLoginResp)
+	@handler Sign
+	post /sign(UserSignReq) returns (UserSignResp)
+	@handler forgetPwd
+	post /forgetPwd(UserForgetPwdReq) returns (UserForgetPwdResp)
+}
+
+// 获取签名 oss
+import "./apiAll/avt/oss.api"
+
+@server(
+	group:avt
+	jwt: Auth
+)
+
+service service-api {
+	@handler Oss
+	post /avt/oss(AvtOssReq) returns (AvtOssResp)
+}
+
+// 用户信息修改 userInfo
+import "./apiAll/userInfo/editInfo.api"
+import "./apiAll/userInfo/editPwd.api"
+import "./apiAll/userInfo/getInfo.api"
+
+@server(
+	group:userInfo
+	jwt: Auth
+)
+
+service service-api {
+	@handler editInfo
+	post /userInfo/editInfo(EditInfoReq) returns (EditInfoResp)
+	@handler editPwd
+	post /userInfo/editPwd(EditPwdReq) returns (EditPwdResp)
+	
+	@handler getInfo
+	post /userInfo/getInfo(GetInfoReq) returns (GetInfoResp)
+	
+}
+
+// tags
+import "./apiAll/tags/addOneTag.api"
+import "./apiAll/tags/delOneTag.api"
+import "./apiAll/tags/editOneTag.api"
+import "./apiAll/tags/getTagList.api"
+import "./apiAll/tags/keepHotTagList.api"
+import "./apiAll/tags/getHotTagList.api"
+
+@server(
+	group:tags
+	jwt: Auth
+)
+
+service service-api {
+	@handler addOneTag
+	post /tags/addOneTag(AddOneTagReq) returns (AddOneTagResp)
+	
+	@handler delOneTag
+	post /tags/delOneTag(DelOneTagReq) returns (DelOneTagResp)
+	
+	@handler editOneTag
+	post /tags/editOneTag(EditOneTagReq) returns (EditOneTagResp)
+	
+	@handler getTagList
+	post /tags/getTagList(GetTagListReq) returns (GetTagListResp)
+	
+	@handler keepHotTagList
+	post /tags/keepHotTagList(keepHotTagListReq) returns (keepHotTagListResp)
+	
+	@handler getHotTagList
+	post /tags/getHotTagList(getHotTagListReq) returns (getHotTagListResp)
+	
+}
+
+// grade_info
+import "./apiAll/grade/applyGrade.api"
+import "./apiAll/grade/getNewGradeInfo.api"
+import "./apiAll/grade/getPassGradeInfo.api"
+import "./apiAll/grade/replyGrade.api"
+import "./apiAll/grade/getOneGradeInfo.api"
+import "./apiAll/grade/getAllGrade.api"
+
+@server(
+	group:grade
+	jwt: Auth
+)
+
+service service-api {
+	@handler applyGrade
+	post /grade/applyGrade(ApplyGradeReq) returns (ApplyGradeResp)
+	@handler getNewGradeInfo
+	post /grade/getNewGradeInfo(GetNewGradeReq) returns (GetNewGradeResp)
+	@handler getPassGradeInfo
+	post /grade/getPassGradeInfo(GetPassGradeReq) returns (GetPassGradeResp)
+	@handler replyGrade
+	post /grade/replyGrade(ReplyGradeReq) returns (ReplyGradeResp)
+	@handler GetOneGrade
+	post /grade/GetOneGrade(GetOneGradeReq) returns (GetOneGradeResp)
+	@handler GetAllGrade
+	post /grade/GetAllGrade(GetAllGradeReq)returns(GetAllGradeResp)
+	
+}
+
+// day_web_info
+import "./apiAll/dayWeb/addApplyGrade.api"
+import "./apiAll/dayWeb/addLogin.api"
+import "./apiAll/dayWeb/addLookupWeb.api"
+
+// import "./apiAll/dayWeb/getApplyGrade"
+
+@server(
+	group:dayWeb
+)
+
+service service-api {
+	@handler AddApplyGrade
+	post /dayWeb/addApplyGrade(addApplyGradeReq) returns (addApplyGradeResp)
+	
+	@handler AddLogin
+	post /dayWeb/addLogin(addLoginReq) returns (addLoginResp)
+	
+	@handler addLookupWeb
+	post /dayWeb/addLookup(addLookupWebReq) returns (addLookupWebResp)
+	
+}

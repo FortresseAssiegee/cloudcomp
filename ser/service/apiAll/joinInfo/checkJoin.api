@@ -1,0 +1,13 @@
+type (
+	// 添加活动
+	checkJoinReq {
+		ActvId       int64 `json:"actvId"`
+		UserCreateId int64 `json:"userCreateId"`
+		UserJoinId   int64 `json:"userJoinId"`
+	}
+	checkJoinResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+		JoinId  int64  `json:"joinId"`
+	}
+)

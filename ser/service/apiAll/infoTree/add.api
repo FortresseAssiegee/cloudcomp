@@ -1,0 +1,19 @@
+type (
+
+	// 添加活动tree信息
+	infoTreeAddReq {
+		ActvId   int64  `json:"actvId"`
+		UserId   int64  `json:"userId"`
+		InfoTree []Leaf `json:"infoTree"`
+	}
+	infoTreeAddResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+	Leaf {
+		Title   string `json:"title"`
+		Content string `json:"content"`
+		Child   []Leaf `json:"children,optional"`
+		Id      int64  `json:"id,optional"`
+	}
+)

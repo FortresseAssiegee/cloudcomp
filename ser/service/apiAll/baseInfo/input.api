@@ -1,0 +1,12 @@
+// 根据标签获取信息
+type (
+	inputReq {
+        Search string `json:"search"`
+	}
+	inputResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+		BaseInfo []GradeBaseAll `json:"baseInfo"`
+		PageObj Page `json:"pageObj"`
+	}
+)

@@ -1,0 +1,21 @@
+type (
+	// 获取活动信息
+	unitTreeGetReq {
+		ActvId int64 `json:"actvId"`
+		UserId int64 `json:"userId"`
+	}
+	unitTreeGetResp {
+		State    string         `json:"state"`
+		Commont  string         `json:"commont"`
+		UnitTree []UnitLeafList `json:"unitTree"`
+	}
+
+	UnitLeafList {
+
+		Id    int64  `json:"id,optional"`
+		Title string `json:"title"`
+		Model int64 `json:"model"`
+
+		Child []UnitLeafList `json:"child,optional"`
+	}
+)

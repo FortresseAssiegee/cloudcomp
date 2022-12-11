@@ -1,0 +1,22 @@
+type (
+	// 获取加入了这个活动的成员
+	checkExamReq {
+		ActvId       int64 `json:"actvId"`
+		UnitId       int64 `json:"unitId"`
+		UserCreateId int64 `json:"userCreateId"`
+		UserJoinId   int64 `json:"userJoinId"`
+	}
+	checkExamResp {
+		State        string   `json:"state"`
+		Commont      string   `json:"commont"`
+		JoinUnitInfo JoinUnit `json:"joinUnitInfo"`
+	}
+
+	JoinUnit {
+		ExamId    int64   `json:"examId"`
+		Score     float64 `json:"score"`     // 分数
+		StartTime string  `json:"startTime"` // 考试时间
+		EndTime   string  `json:"endTime"`   // 交卷时间
+		Rank      int64   `json:"rank"`
+	}
+)

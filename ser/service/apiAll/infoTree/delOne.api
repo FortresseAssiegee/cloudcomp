@@ -1,0 +1,11 @@
+type (
+	infoTreeDelOneReq {
+		ActvId int64 `json:"actvId"`
+		UserId int64 `json:"userId"`
+		Id     int64 `json:"id"`
+	}
+	infoTreeDelOneResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

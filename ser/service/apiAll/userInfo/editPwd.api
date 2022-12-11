@@ -1,0 +1,12 @@
+type (
+	// 修改密码
+	EditPwdReq {
+		UserId int64  `json:"userId"`
+		NewPwd string `json:"newPwd"`
+		OldPwd string `json:"oldPwd"`
+	}
+	EditPwdResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

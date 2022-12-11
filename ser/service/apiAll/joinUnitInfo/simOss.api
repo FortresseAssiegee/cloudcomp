@@ -1,0 +1,17 @@
+type (
+	// 获取加入了这个活动的成员
+	simOssReq {
+		ActvId       int64 `json:"actvId"`
+		UnitId       int64 `json:"unitId"`
+		UserCreateId int64 `json:"userCreateId"`
+		UserJoinId   int64 `json:"userJoinId"`
+
+		ImageUriA string `json:"imageUriA"`
+		ImageUriB string `json:"imageUriB"`
+	}
+	simOssResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+		SimVal  float64  `json:"simVal"`
+	}
+)

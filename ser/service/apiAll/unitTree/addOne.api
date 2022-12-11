@@ -1,0 +1,13 @@
+type (
+	unitTreeAddOneReq {
+		ParentId int64  `json:"parentId"`
+		UserId   int64  `json:"userId"`
+		ActvId   int64  `json:"actvId"`
+		Title    string `json:"title"`
+		
+	}
+	unitTreeAddOneResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

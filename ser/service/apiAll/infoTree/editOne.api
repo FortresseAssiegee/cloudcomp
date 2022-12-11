@@ -1,0 +1,13 @@
+type (
+	infoTreeEditOneReq {
+		ActvId  int64  `json:"actvId"`
+		UserId  int64  `json:"userId"`
+		Content string `json:"content"`
+		Title   string `json:"title"`
+		Id      int64  `json:"id"`
+	}
+	infoTreeEditOneResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

@@ -1,0 +1,17 @@
+type (
+	// 获取处理过的认证 code61，62
+	GetTagListReq {
+		
+	}
+
+	GetTagListResp {
+		State       string  `json:"state"`
+		Commont     string  `json:"commont"`
+		TagInfoList []Child `json:"TagInfo"`
+	}
+	Child {
+		Label    string  `json:"label"`
+		TagId    int64   `json:"tagId"`
+		Children []Child `json:"children"`
+	}
+)

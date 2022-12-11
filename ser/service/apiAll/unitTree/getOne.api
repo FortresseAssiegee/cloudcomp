@@ -1,0 +1,15 @@
+type (
+	unitTreeGetOneReq {
+		ActvId int64 `json:"actvId"`
+		UserId int64 `json:"userId"`
+		UnitId int64 `json:"unitId"`
+	}
+	unitTreeGetOneResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+		OneNode UnitBase   `json:"node"`
+		MaxExam int64  `json:"maxExam"`
+	}
+
+
+)

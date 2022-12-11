@@ -1,0 +1,18 @@
+type (
+	// 获取加入了这个活动的成员
+	endExam52Req {
+		ExamId int64 `json:"examId"`
+
+		StartTime  string     `json:"startTime"`
+		EndTime    string     `json:"endTime"`
+		RecordInfo ExamRecord `json:"recordInfo"`
+		Score      float64     `json:"score"`
+	}
+
+	endExam52Resp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+
+
+)

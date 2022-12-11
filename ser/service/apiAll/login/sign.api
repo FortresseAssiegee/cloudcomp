@@ -1,0 +1,15 @@
+type (
+	// 用户注册
+	UserSignReq {
+		UserName string `json:"userName"`
+		Tel      string `json:"tel"`
+		Pwd      string `json:"pwd"`
+	}
+	UserSignResp {
+		AccessToken  string `json:"accessToken"`
+		AccessExpire int64  `json:"accessExpire"`
+		State        string `json:"state"`
+		Commont      string `json:"commont"`
+		UserId       int64 `json:"userId"`
+	}
+)

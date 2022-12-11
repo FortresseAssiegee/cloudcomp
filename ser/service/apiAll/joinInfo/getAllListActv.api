@@ -1,0 +1,28 @@
+type (
+	// 获取加入了这个活动的成员
+	getAllListActvReq {
+		ActvId int64 `json:"actvId"`
+		// JoinId       int64 `josn:"joinId"`
+		// UserCreateId int64 `json:"userCreateId"`
+		// UserJoinId   int64 `json:"userJoinId"`
+		NowPage int64 `json:"nowPage"`
+		Count   int64 `json:"count"`
+	}
+	getAllListActvResp {
+		State        string     `json:"state"`
+		Commont      string     `json:"commont"`
+		JoinUserList []UserInfo `json:"joinUserList"`
+		PageObj Page `json:"pageObj"`
+	}
+
+	UserInfo {
+		UserName string `json:"userName"`
+		Avt      string `json:"avt"`
+		Tel      string `json:"tel"`
+		UserId   int64  `json:"userId"`
+		Grade    int64  `json:"grade"`
+		Email    string `json:"email"`
+		JoinDate string `json:"joinDate"`
+		JoinId int64 `json:"joinId"`
+	}
+)

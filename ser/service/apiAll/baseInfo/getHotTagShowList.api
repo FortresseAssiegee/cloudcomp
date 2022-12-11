@@ -1,0 +1,19 @@
+// 根据热门标签获取信息
+type (
+
+	hotTagListReq {
+      
+	}
+	hotTagListResp {
+		State    string `json:"state"`
+		Commont  string `json:"commont"`
+        HotTagList []HotTag `json:"hotTagList"`
+	}
+
+    HotTag{
+        Label string `json:"label"`
+        TagId int64 `json:"tagId"`
+		Children []GradeBaseAll `json:"children"`
+    }
+	
+)

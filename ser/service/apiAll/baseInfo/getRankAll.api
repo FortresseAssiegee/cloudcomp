@@ -1,0 +1,26 @@
+// 获取活动排名
+type (
+	getRankAllReq {
+	}
+	getRankAllResp {
+		State           string         `json:"state"`
+		Commont         string         `json:"commont"`
+		WeekLookUpRank  []RankBaseInfo `json:"weekLookUpRank"`
+		WeekHotRank     []RankBaseInfo `json:"weekHotRank"`
+		SchoolCompeRank []RankUserInfo `json:"schoolCompeRank"`
+	}
+	RankBaseInfo {
+		ActvId   int64  `json:"actvId"`
+		ActvName string `json:"actvName"`
+
+		UserId         int64  `json:"userId"`
+		CreateUserName string `json:"createUserName"`
+
+		Pstr string `json:"pstr,optional"`
+	}
+	RankUserInfo {
+		UserId   int64  `json:"userId"`
+		UserName string `json:"UserName"`
+		Avt      string `json:"avt"`
+	}
+)

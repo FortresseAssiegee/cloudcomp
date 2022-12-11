@@ -1,0 +1,13 @@
+type (
+	keepHotTagListReq {
+		TagList []int64 `json:"tagList"`
+	}
+	keepHotTagListResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+
+	HotTagId {
+		TagId int64 `json:"tagId"`
+	}
+)

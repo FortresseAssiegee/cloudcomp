@@ -1,0 +1,10 @@
+type (
+	// 重考
+	delExamReq {
+		ExamId int64 `json:"examId"`
+	}
+	delExamResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

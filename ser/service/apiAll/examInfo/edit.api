@@ -1,0 +1,12 @@
+type (
+	// 添加活动
+	examInfoEditReq {
+		ActvId  int64  `json:"actvId"`
+		UserId  int64  `json:"userId"`
+	
+	}
+	examInfoEditResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

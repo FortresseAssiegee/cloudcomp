@@ -1,0 +1,10 @@
+type (
+	// 增加热度
+	addLookupWebReq {
+		Date string `json:"date"`
+	}
+	addLookupWebResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

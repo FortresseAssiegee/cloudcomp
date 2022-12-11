@@ -1,0 +1,11 @@
+type (
+	// 添加活动
+	baseInfoDelReq {
+		ActvId         int64  `json:"actvId"`
+		UserId         int64  `json:"userId"`
+	}
+	baseInfoDelResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

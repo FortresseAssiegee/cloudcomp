@@ -1,0 +1,12 @@
+type (
+	// 结束
+	outReq {
+		ActvId  int64  `json:"actvId"`
+		UserId  int64  `json:"userId"`
+		EndTime string `json:"endTime"`
+	}
+	outResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

@@ -1,0 +1,23 @@
+// 根据标签获取信息
+type (
+	getTagShowListReq {
+		PeriodCode []int64 `json:"periodCode"`
+		AwardCode  []int64 `json:"awardCode"`
+		TagCode    []int64 `json:"tagCode"`
+		ExamCode   []int64 `json:"examCode"`
+		NowPage    int64   `json:"nowPage"`
+		Count      int64   `json:"count"`
+	}
+	getTagShowListResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+		BaseInfo []GradeBaseAll `json:"baseInfo"`
+		PageObj Page `json:"pageObj"`
+	}
+
+	Page {
+		LenPage int64 `json:"lenPage"`
+		Count   int64 `json:"count"`
+		NowPage int64 `json:"nowPage"`
+	}
+)

@@ -1,0 +1,14 @@
+type (
+	examInfoEditOneReq {
+		ActvId       int64    `json:"actvId"`
+		UnitId       int64    `json:"unitId"`
+		UserId       int64    `json:"userId"`
+		ExamId       int64    `json:"examId"`
+		QuestOneList QuestOne `json:"questOneList"`
+	}
+	examInfoEditOneResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+	
+)

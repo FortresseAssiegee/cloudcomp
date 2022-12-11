@@ -1,0 +1,32 @@
+// 主办方获取考试成绩
+
+type (
+	// 获取加入了这个活动的成员
+	getRankListReq {
+		UnitId       int64 `json:"unitId"`
+		UserCreateId int64 `json:"userCreateId"`
+		Count        int64 `json:"count"`
+		NowPage      int64 `json:"nowPage"`
+	}
+	getRankListResp {
+		State   string     `json:"state"`
+		Commont string     `json:"commont"`
+		List    []RankInfo `json:"list"`
+		PageObj  Page      `json:"pageObj"`
+	}
+
+	RankInfo {
+		ExamId   int64  `json:"examId"`
+		ActvId   int64  `json:"actvId"`
+		Rank     int64  `json:"rank"`
+		UserName string `json:"UserName"`
+		Avt      string `json:"avt"`
+		Tel      string `json:"tel"`
+
+		UserCreateId int64   `json:"userCreateId"`
+		UserJoinId   int64   `json:"userJoinId"`
+		Score        float64 `json:"score"`
+		Intro        string  `json:"intro"`
+		During       string  `json:"during"`
+	}
+)

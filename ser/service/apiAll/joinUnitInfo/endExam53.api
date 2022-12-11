@@ -1,0 +1,17 @@
+type (
+	// 获取加入了这个活动的成员
+	endExam53Req {
+		ExamId       int64 `json:"examId"`
+
+		AnswerList []AnswerExam `json:"answerList"`
+		RecordInfo ExamRecord   `json:"recordInfo"`
+
+		StartTime string `json:"startTime"`
+		EndTime   string `json:"endTime"`
+	}
+	endExam53Resp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+
+)

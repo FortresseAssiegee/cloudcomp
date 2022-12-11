@@ -1,0 +1,12 @@
+type (
+
+	// 添加活动tree信息
+	examInfoAddReq {
+		ActvId int64 `json:"actvId"`
+		UserId int64 `json:"userId"`
+	}
+	examInfoAddResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

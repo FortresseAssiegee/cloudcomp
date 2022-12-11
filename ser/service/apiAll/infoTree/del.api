@@ -1,0 +1,12 @@
+type (
+	// 添加活动
+	infoTreeDelReq {
+		ActvId         int64  `json:"actvId"`
+		UserId         int64  `json:"userId"`
+		InfoId         int64  `json:"infoId"`
+	}
+	infoTreeDelResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

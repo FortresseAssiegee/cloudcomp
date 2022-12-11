@@ -1,0 +1,21 @@
+type (
+	// 获取未处理的认证 code60
+	GetNewGradeReq {
+	}
+	GetNewGradeResp {
+		State         string      `json:"state"`
+		Commont       string      `json:"commont"`
+		GradeInfoList []GradeInfo `json:"gradeInfo"`
+	}
+	GradeInfo {
+		GradeId    int64  `json:"gradeId"`
+		UserId     int64  `json:"userId"`
+		UserName   string  `json:"userName"`
+		UserTel    string `json:"userTel"`
+		StartTime  string `json:"startTime"`
+		EndTime    string `json:"endTime"`
+		ApplyIntro string `json:"applyIntro"`
+		ReplyIntro string `json:"replyIntro"`
+		GradeCode  int64  `json:"gradeCode"`
+	}
+)

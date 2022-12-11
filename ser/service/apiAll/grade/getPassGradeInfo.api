@@ -1,0 +1,19 @@
+type (
+	// 获取处理过的认证 code61，62
+	GetPassGradeReq {
+		
+	}
+	GetPassGradeResp {
+		State         string      `json:"state"`
+		Commont       string      `json:"commont"`
+		GradeInfoList []GradeInfo `json:"gradeInfo"`
+	}
+	// GradeInfo {
+	// 	GradeId    int64  `json:"gradeId"`
+	// 	UserId     int64  `json:"userId"`
+	// 	StartTime  string `json:"startTime"`
+	// 	EndTime    string `json:"endTime"`
+	// 	ApplyIntro string `json:"applyIntro"`
+	// 	ReplyIntro string `json:"replyIntro"`
+	// }
+)

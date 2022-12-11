@@ -1,0 +1,10 @@
+type (
+	EditOneTagReq {
+		TagId int64  `json:"tagId"`
+		Label string `json:"label"`
+	}
+	EditOneTagResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

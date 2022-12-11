@@ -1,0 +1,21 @@
+
+
+type (
+
+	// 添加活动tree信息
+	examInfoGetReq {
+		ActvId int64 `json:"actvId"`
+		UnitId int64 `json:"unitId"`
+		UserId int64 `json:"userId"`
+	}
+	examInfoGetResp {
+		State          string          `json:"state"`
+		Commont        string          `json:"commont"`
+		QuestTitleList []QuestTitleOne `json:"questOne"`
+	}
+
+	QuestTitleOne {
+		Title  string `json:"title"`
+		ExamId int64  `json:"examId"`
+	}
+)

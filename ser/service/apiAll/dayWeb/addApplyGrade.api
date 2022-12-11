@@ -1,0 +1,10 @@
+type (
+	// 增加热度
+	addApplyGradeReq {
+		Date string `json:"date"`
+	}
+	addApplyGradeResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

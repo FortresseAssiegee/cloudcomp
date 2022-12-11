@@ -1,0 +1,12 @@
+type (
+	// 增加热度
+	addLookupActvReq {
+		Date   string `json:"date"`
+		ActvId int64  `json:"actvId"`
+		UserId int64  `json:"userId"`
+	}
+	addLookupActvResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

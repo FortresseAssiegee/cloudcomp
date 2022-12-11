@@ -1,0 +1,13 @@
+type (
+	// 增加热度
+	addHotReq {
+		Date string `json:"date"`
+		ActvId int64 `json:"actvId"`
+        UserId int64 `json:"userId"`
+	}
+	addHotResp {
+		State    string    `json:"state"`
+		Commont  string    `json:"commont"`
+	}
+
+)

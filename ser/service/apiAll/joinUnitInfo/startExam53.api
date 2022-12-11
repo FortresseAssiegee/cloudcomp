@@ -1,0 +1,29 @@
+type (
+
+	// 限时答题，在时间内，回答
+	// 获取加入了这个活动的成员
+	startExam53Req {
+		ActvId       int64 `json:"actvId"`
+		UnitId       int64 `json:"unitId"`
+		UserCreateId int64 `json:"userCreateId"`
+		UserJoinId   int64 `json:"userJoinId"`
+	}
+	startExam53Resp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+		ExamId  int64  `json:"examId"`
+		// StartTime   string      `json:"startTime"`
+		// MaBeEndTime string      `json:"maBeEndTime"`
+		QuestList []TitleExam53 `json:"questList"`
+	}
+	TitleExam53 {
+		ExamId int64    `json:"examId,optional"`
+		Title  string   `json:"title"`
+		Quest  []string `json:"quest"`
+		// Answer []string `json:"answer"`
+		Img    string  `json:"img"`
+		Method int64   `json:"method"`
+		During int64   `json:"during,optional"`
+		Score  float64 `json:"score"`
+	}
+)

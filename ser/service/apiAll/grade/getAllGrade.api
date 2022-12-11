@@ -1,0 +1,17 @@
+type (
+	// 获取未处理的认证 code60
+	GetAllGradeReq {
+		Num int64 `json:"num"`
+	}
+	GetAllGradeResp {
+		State    string          `json:"state"`
+		Commont  string          `json:"commont"`
+		UserList []UserInfoGrade `json:"userList"`
+	}
+
+	UserInfoGrade {
+		UserName string `json:"userName"`
+		Avt      string `json:"avt"`
+		Intro    string `json:"intro"`
+	}
+)

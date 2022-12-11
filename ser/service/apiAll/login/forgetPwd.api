@@ -1,0 +1,11 @@
+type (
+	// 短信找回密码
+	UserForgetPwdReq {
+		Tel string `json:"tel"`
+		Pwd string `json:"pwd"`
+	}
+	UserForgetPwdResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

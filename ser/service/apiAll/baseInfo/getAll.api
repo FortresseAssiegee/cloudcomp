@@ -1,0 +1,23 @@
+type (
+	// 获取活动信息
+	baseInfoGetAllReq {
+		UserId  int64 `json:"userId"`
+		NowPage int64 `json:"nowPage"`
+		Count   int64 `json:"count"`
+	}
+	baseInfoGetAllResp {
+		State    string      `json:"state"`
+		Commont  string      `json:"commont"`
+		BaseInfo []BaseTable `json:"baseInfo"`
+		PageObj Page `json:"pageObj"`
+	}
+	BaseTable {
+		ActvId     int64  `json:"actvId"`
+		StateCode  int64  `json:"stateCode"`
+		ActvName   string `json:"actvName"`
+		InfoDegree int64  `json:"infoDegree"`
+
+		StartTime string `json:"startTime"`
+		EndTime   string `json:"endTime"`
+	}
+)

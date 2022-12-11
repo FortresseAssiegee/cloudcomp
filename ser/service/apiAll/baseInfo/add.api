@@ -1,0 +1,12 @@
+type (
+	// 添加活动
+	baseInfoAddReq {
+		UserId    int64 `json:"userId"`
+		ActvName       string `json:"actvName"`
+	}
+	baseInfoAddResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+
+)

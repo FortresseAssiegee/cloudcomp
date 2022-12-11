@@ -1,0 +1,14 @@
+// 获取企校排名
+type (
+	getRankHomeReq {
+	}
+	getRankHomeResp {
+		State           string     `json:"state"`
+		Commont         string     `json:"commont"`
+		WeekLookUpRank  []RankBaseInfo `json:"weekLookUpRank"`
+		WeekHotRank     []RankBaseInfo `json:"weekHotRank"`
+		SchoolCompeRank []RankUserInfo `json:"schoolCompeRank"`
+	}
+
+
+)

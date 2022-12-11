@@ -1,0 +1,13 @@
+type (
+	// 获取活动其中一个活动
+	baseInfoGetOneReq {
+		UserId int64 `json:"userId"`
+		ActvId int64 `json:"actvId"`
+	}
+	baseInfoGetOneResp {
+		State    string    `json:"state"`
+		Commont  string    `json:"commont"`
+		BaseInfo BaseAll `json:"baseInfo"`
+	}
+
+)

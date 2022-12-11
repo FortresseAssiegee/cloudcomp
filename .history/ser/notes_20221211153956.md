@@ -1,0 +1,8 @@
+# 常用指令
+ ## api生成
+
+ goctl api go -api ./service.api -dir ./ 
+
+## 调用api
+go run service.go  -f etc/user.yaml
+

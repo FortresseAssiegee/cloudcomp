@@ -1,0 +1,10 @@
+type (
+	AddOneTagReq {
+		ParentId int64  `json:"parentId"`
+		Label    string `json:"label"`
+	}
+	AddOneTagResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

@@ -1,0 +1,9 @@
+type (
+	getHotTagListReq {
+	}
+	getHotTagListResp {
+		State   string  `json:"state"`
+		Commont string  `json:"commont"`
+		TagList []int64 `json:"tagList"`
+	}
+)

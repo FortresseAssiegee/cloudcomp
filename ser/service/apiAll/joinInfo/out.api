@@ -1,0 +1,10 @@
+type (
+	// 添加活动
+	outJoinReq {
+		JoinId int64 `json:"joinId"`
+	}
+	outJoinResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

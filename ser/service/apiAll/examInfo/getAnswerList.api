@@ -1,0 +1,26 @@
+// 获取答案
+type (
+	examInfoAddOneReq {
+		UserId    int64   `json:"userId"`
+		ActvId    int64   `json:"actvId"`
+		UnitId    int64   `json:"unitId"`
+		QuestList []int64 `json:"questList"`
+	}
+
+	examInfoAddOneResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+
+	QuestOne {
+		ExamId int64  `json:"examId,optional"`
+		Title  string `json:"title"`
+		Quest  string `json:"quest"`
+		Answer string `json:"answer"`
+		Img    string `json:"img"`
+
+		Method int64   `json:"method"`
+		During int64   `json:"during,optional"`
+		Score  float64 `json:"score"`
+	}
+)

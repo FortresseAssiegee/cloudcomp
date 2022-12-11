@@ -1,0 +1,27 @@
+type (
+	unitTreeEditOneReq {
+		UnitId int64    `json:"UnitId"`
+		ActvId int64    `json:"actvId"`
+		UserId int64    `json:"userId"`
+		OneNode   UnitBase `json:"oneNode"`
+	}
+	unitTreeEditOneResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+
+	UnitBase {
+		Title    string `json:"title"`
+		Tips     string `json:"tips"`
+		FileName string `json:"fileName,optional"`
+
+		Model int64 `json:"model"`
+
+		ExamCode  int64  `json:"examCode"`
+		Face      int64  `json:"face"`
+		Count     int64  `json:"count"`
+		During    int64  `json:"during,optional"`
+		StartTime string `json:"startTime,optional"`
+		EndTime   string `json:"endTime,optional"`
+	}
+)

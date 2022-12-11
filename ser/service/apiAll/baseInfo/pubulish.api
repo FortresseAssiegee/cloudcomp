@@ -1,0 +1,12 @@
+type (
+	// 发布活动
+	publishReq {
+		ActvId    int64  `json:"actvId"`
+		UserId    int64  `json:"userId"`
+		StartTime string `json:"startTime"`
+	}
+	pubulishResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

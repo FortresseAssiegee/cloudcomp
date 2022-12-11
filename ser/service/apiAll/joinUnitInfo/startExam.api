@@ -1,0 +1,26 @@
+type (
+	// 获取加入了这个活动的成员
+	startExamReq {
+		ActvId       int64 `json:"actvId"`
+		UnitId       int64 `json:"unitId"`
+		UserCreateId int64 `json:"userCreateId"`
+		UserJoinId   int64 `json:"userJoinId"`
+	}
+	startExamResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+		ExamId  int64  `json:"examId"`
+		// StartTime   string      `json:"startTime"`
+		// MaBeEndTime string      `json:"maBeEndTime"`
+		QuestList []TitleExam `json:"questList"`
+	}
+	TitleExam {
+		ExamId int64    `json:"examId,optional"`
+		Title  string   `json:"title"`
+		Quest  []string `json:"quest"`
+		// Answer string `json:"answer"`
+		Img    string  `json:"img"`
+		Method int64   `json:"method"`
+		Score  float64 `json:"score"`
+	}
+)

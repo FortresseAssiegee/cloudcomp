@@ -1,0 +1,24 @@
+type (
+	// 用户获取认证结果
+
+	GetOneGradeReq {
+		UserId int64 `json:"userId"`
+	}
+	GetOneGradeResp {
+		State         string          `json:"state"`
+		Commont       string          `json:"commont"`
+		GradeInfoList []GradeInfo `json:"gradeInfo"`
+	}
+	UserGradeInfo {
+		GradeId int64 `json:"gradeId"`
+		UserId  int64 `json:"userId"`
+		UserName   string  `json:"userName"`
+		UserTel    string `json:"userTel"`
+
+		StartTime  string `json:"startTime"`
+		EndTime    string `json:"endTime"`
+		ApplyIntro string `json:"applyIntro"`
+		ReplyIntro string `json:"replyIntro"`
+		GradeCode  int64  `json:"gradeCode"`
+	}
+)

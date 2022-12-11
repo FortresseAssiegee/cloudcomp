@@ -1,0 +1,9 @@
+type (
+	DelOneTagReq {
+		TagId int64 `json:"tagId"`
+	}
+	DelOneTagResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+	}
+)

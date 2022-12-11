@@ -1,0 +1,16 @@
+type (
+	// 编辑用户信息
+	EditInfoReq {
+		UserId   int64  `json:"userId"`
+		UserName string `json:"userName"`
+		Avt      string `json:"avt"`
+		Tel      string `json:"tel"`
+		Intro      string `json:"intro"`
+		Email      string `json:"email"`
+	}
+	EditInfoResp {
+		State   string `json:"state"`
+		Commont string `json:"commont"`
+		UserInfo Info   `json:"userInfo"`
+	}
+)
