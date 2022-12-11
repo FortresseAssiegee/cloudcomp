@@ -1,10 +1,10 @@
 # cloudcomp
-项目名称：云知识竞赛平台
-队伍名称：云玩家
+项目名称：云知识竞赛平台<br>
+队伍名称：云玩家<br>
 成员:网络204赵芯宁，计科214刘庄杰，202智科梅刚
 
 # 源代码
-前端地址：https://github.com/FortresseAssiegee/cloudcomp/tree/main/web
+前端地址：https://github.com/FortresseAssiegee/cloudcomp/tree/main/web <br>
 后端地址: https://github.com/FortresseAssiegee/cloudcomp/tree/main/ser
 
 # 使用
