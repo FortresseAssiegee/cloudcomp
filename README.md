@@ -5,7 +5,8 @@
 
 # 源代码
 前端地址：https://github.com/FortresseAssiegee/cloudcomp/tree/main/web <br>
-后端地址: https://github.com/FortresseAssiegee/cloudcomp/tree/main/ser
+后端地址: https://github.com/FortresseAssiegee/cloudcomp/tree/main/ser <br>
+网站地址：http://47.103.88.114:86/
 
 # 使用
 ## 前端
