@@ -1,12 +1,7 @@
 # cloudcomp
 项目名称：云知识竞赛平台<br>
 队伍名称：云玩家<br>
-成员:网络204赵芯宁，计科214刘庄杰，202智科梅刚
-
 # 源代码
-前端地址：https://github.com/FortresseAssiegee/cloudcomp/tree/main/web <br>
-后端地址: https://github.com/FortresseAssiegee/cloudcomp/tree/main/ser <br>
-网站地址：http://47.103.88.114:86/
 
 # 使用
 ## 前端
@@ -31,9 +26,6 @@ npm run serve
 密码：123<br>
 
 （2）管理员
-
-用户名：adminUser<br>
-密码：123456<br>
 
 4.相关说明
 
